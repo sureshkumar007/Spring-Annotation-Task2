@@ -7,11 +7,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-/**Indicates this is a controller class*/
+/**
+ * Indicates this is a controller class
+ */
 @Controller
 public class UserController {
 
-    /**RequestMapping annotation maps HTTP requests to handler methods*/
+    /**
+     * RequestMapping annotation maps HTTP requests to handler methods
+     */
     @RequestMapping("/")
     public String details() {
         /**Create the initial blank form*/
@@ -20,6 +24,8 @@ public class UserController {
 
 
     @RequestMapping(value = "/message")
+
+    /**@RequestParam used to bind a web request parameter to the parameter of the handler method.*/
     public ModelAndView populateUser(@RequestParam("userName") String userName) {
         User user = new User();
         /**populate the data inside the User class using @RequestParam*/
