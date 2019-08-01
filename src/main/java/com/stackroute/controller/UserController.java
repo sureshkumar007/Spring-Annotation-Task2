@@ -10,6 +10,9 @@ import org.springframework.web.servlet.ModelAndView;
 /**
  * Indicates this is a controller class
  */
+/*
+Controll the flow of the process
+ */
 @Controller
 public class UserController {
 
